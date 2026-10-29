@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22"
+      xmlns:fx="http://javafx.com/fxml/1"
+      alignment="CENTER"
+      spacing="24"
+      prefWidth="800"
+      prefHeight="600"
+      styleClass="pantalla-menu">
+
+    <ImageView fitWidth="600" preserveRatio="true">
+        <Image url="@../sprites/titulo.png"/>
+    </ImageView>
+    <Label text="Paradigmas de Programación — FIUBA 2026c1" styleClass="subtitulo"/>
+    <Button text="Iniciar juego" onAction="#alIniciar" styleClass="boton-grande"/>
+    <Button text="Salir" onAction="#alSalir" styleClass="boton-grande"/>
+
+</VBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:simpleType name="tipoEnemigo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="debil"/>
+            <xs:enumeration value="medio"/>
+            <xs:enumeration value="fuerte"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoTorreta">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="simple"/>
+            <xs:enumeration value="rapida"/>
+            <xs:enumeration value="potente"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="nivel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ruta">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="punto" minOccurs="2" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="x" type="xs:double" use="required"/>
+                                    <xs:attribute name="y" type="xs:double" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="slots">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="slot" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="x" type="xs:double" use="required"/>
+                                    <xs:attribute name="y" type="xs:double" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="torretasIniciales" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="torreta" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="tipo" type="tipoTorreta" use="required"/>
+                                    <xs:attribute name="x" type="xs:double" use="required"/>
+                                    <xs:attribute name="y" type="xs:double" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="oleada">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="enemigo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="tipo" type="tipoEnemigo" use="required"/>
+                                    <xs:attribute name="delayMs" type="xs:nonNegativeInteger" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="dineroInicial" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="vidaBase" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

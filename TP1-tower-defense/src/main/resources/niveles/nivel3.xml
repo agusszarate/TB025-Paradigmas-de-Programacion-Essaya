@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nivel dineroInicial="180" vidaBase="10">
+    <ruta>
+        <punto x="0" y="500"/>
+        <punto x="200" y="500"/>
+        <punto x="200" y="200"/>
+        <punto x="500" y="200"/>
+        <punto x="500" y="500"/>
+        <punto x="700" y="500"/>
+        <punto x="700" y="100"/>
+        <punto x="800" y="100"/>
+    </ruta>
+    <slots>
+        <slot x="100" y="430"/>
+        <slot x="270" y="350"/>
+        <slot x="350" y="270"/>
+        <slot x="430" y="350"/>
+        <slot x="630" y="170"/>
+    </slots>
+    <torretasIniciales>
+        <torreta tipo="rapida" x="270" y="350"/>
+    </torretasIniciales>
+    <oleada>
+        <enemigo tipo="debil" delayMs="2000"/>
+        <enemigo tipo="debil" delayMs="3500"/>
+        <enemigo tipo="medio" delayMs="5000"/>
+        <enemigo tipo="medio" delayMs="6500"/>
+        <enemigo tipo="debil" delayMs="8000"/>
+        <enemigo tipo="fuerte" delayMs="9500"/>
+        <enemigo tipo="medio" delayMs="11000"/>
+        <enemigo tipo="medio" delayMs="12500"/>
+        <enemigo tipo="fuerte" delayMs="14000"/>
+        <enemigo tipo="medio" delayMs="15500"/>
+        <enemigo tipo="fuerte" delayMs="17000"/>
+        <enemigo tipo="medio" delayMs="18500"/>
+        <enemigo tipo="fuerte" delayMs="20000"/>
+        <enemigo tipo="fuerte" delayMs="21500"/>
+        <enemigo tipo="fuerte" delayMs="23000"/>
+    </oleada>
+</nivel>

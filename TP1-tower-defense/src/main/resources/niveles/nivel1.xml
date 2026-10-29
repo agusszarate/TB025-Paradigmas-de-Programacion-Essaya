@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nivel dineroInicial="100" vidaBase="5">
+    <ruta>
+        <punto x="0" y="300"/>
+        <punto x="400" y="300"/>
+        <punto x="400" y="100"/>
+        <punto x="800" y="100"/>
+    </ruta>
+    <slots>
+        <slot x="180" y="230"/>
+        <slot x="460" y="200"/>
+        <slot x="620" y="170"/>
+    </slots>
+    <torretasIniciales/>
+    <oleada>
+        <enemigo tipo="debil" delayMs="2000"/>
+        <enemigo tipo="debil" delayMs="3500"/>
+        <enemigo tipo="debil" delayMs="5000"/>
+        <enemigo tipo="debil" delayMs="6500"/>
+        <enemigo tipo="debil" delayMs="8000"/>
+        <enemigo tipo="debil" delayMs="9500"/>
+        <enemigo tipo="debil" delayMs="11000"/>
+        <enemigo tipo="debil" delayMs="12500"/>
+        <enemigo tipo="debil" delayMs="14000"/>
+        <enemigo tipo="debil" delayMs="15500"/>
+    </oleada>
+</nivel>
